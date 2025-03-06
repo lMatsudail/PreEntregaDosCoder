@@ -1,20 +1,21 @@
 package com.CoderEntrega.PreEntregaUnoCoder.modelo;
+import java.time.LocalDateTime;
 
 public class EmpleadoDTO {
     
-    // generando atributos de la clase "SucursalDTO" evitando asi errores con "empleado"
-
-    private int id;
+    private long id;
     private String nombre;
     private String apellido;
     private String documento;
     private String cargo;
     private SucursalDTO sucursal;
+    private LocalDateTime fechaEntrada;
+    private LocalDateTime fechaSalida;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
     public String getNombre() {
@@ -47,13 +48,32 @@ public class EmpleadoDTO {
     public void setSucursal(SucursalDTO sucursal) {
         this.sucursal = sucursal;
     }
-    public EmpleadoDTO(int id, String nombre, String apellido, String documento, String cargo, SucursalDTO sucursal) {
+    
+    public LocalDateTime getFechaEntrada() {
+        return fechaEntrada;
+    }
+    public void setFechaEntrada(LocalDateTime fechaEntrada) {
+        this.fechaEntrada = fechaEntrada;
+    }
+    public LocalDateTime getFechaSalida() {
+        return fechaSalida;
+    }
+    public void setFechaSalida(LocalDateTime fechaSalida) {
+        this.fechaSalida = fechaSalida;
+    }
+    public EmpleadoDTO(long id, String nombre, String apellido, String documento, String cargo, SucursalDTO sucursal,
+            LocalDateTime fechaEntrada, LocalDateTime fechaSalida) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.documento = documento;
         this.cargo = cargo;
         this.sucursal = sucursal;
+        this.fechaEntrada = fechaEntrada;
+        this.fechaSalida = fechaSalida;
     }
+    public EmpleadoDTO() {
+    }
+    
     
 }

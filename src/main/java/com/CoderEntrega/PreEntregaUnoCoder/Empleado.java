@@ -1,26 +1,28 @@
 package com.CoderEntrega.PreEntregaUnoCoder;
+import java.time.LocalDateTime;
+
 import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "EMPLEADOS")
+@Table(name = "EMPLEADO")
 
 public class Empleado {
-@Id
-@GeneratedValue (strategy = GenerationType.IDENTITY)
-private Long id;
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
 
-private String nombre;
+    private Long id;
+    private String nombre;
+    private String apellido;
+    private String documento;
+    private String cargo;
 
-private String apellido;
-
-private String documento;
-
-private String cargo;
-
-@ManyToOne (optional = false)
-@JoinColumn(name = "SUCURSAL_ID")
-private Sucursal sucursal;
+    @ManyToOne (optional = false)
+    @JoinColumn(name = "SUCURSAL_ID")
+    private Sucursal sucursal;
+    
+    private LocalDateTime fechaEntrada;
+    private LocalDateTime fechaSalida;
 
 // generando getters y setters en class "empleado"
 
@@ -71,17 +73,35 @@ public Sucursal getSucursal() {
 public void setSucursal(Sucursal sucursal) {
     this.sucursal = sucursal;
 }
+public LocalDateTime getFechaEntrada() {
+    return fechaEntrada;
+}
 
-public Empleado(String nombre, String apellido, String documento, String cargo, Sucursal sucursal) {
+public void setFechaEntrada(LocalDateTime fechaEntrada) {
+    this.fechaEntrada = fechaEntrada;
+}
+
+public LocalDateTime getFechaSalida() {
+    return fechaSalida;
+}
+
+public void setFechaSalida(LocalDateTime fechaSalida) {
+    this.fechaSalida = fechaSalida;
+}
+
+public Empleado(Long id, String nombre, String apellido, String documento, String cargo, Sucursal sucursal,
+        LocalDateTime fechaEntrada, LocalDateTime fechaSalida) {
+    this.id = id;
     this.nombre = nombre;
     this.apellido = apellido;
     this.documento = documento;
     this.cargo = cargo;
     this.sucursal = sucursal;
+    this.fechaEntrada = fechaEntrada;
+    this.fechaSalida = fechaSalida;
 }
 
-public Empleado(String nombre) {
-    this.nombre = nombre;
+public Empleado() {
 }
 
 }
