@@ -1,7 +1,8 @@
 package com.CoderEntrega.PreEntregaUnoCoder.Controllers;
-import com.CoderEntrega.PreEntregaUnoCoder.Empleado;
+import com.CoderEntrega.PreEntregaUnoCoder.DTOs.EmpleadoDTO;
 import com.CoderEntrega.PreEntregaUnoCoder.Services.EmpleadoService;
-import com.CoderEntrega.PreEntregaUnoCoder.modelo.EmpleadoDTO;
+import com.CoderEntrega.PreEntregaUnoCoder.modelo.Empleado;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,7 @@ public class EmpleadoController {
     }
 
     @GetMapping
-    public List<Empleado> getAllEmpleados() {
+    public List<EmpleadoDTO> getAllEmpleados() {
         return empleadoService.getAllEmpleados();
     }
 

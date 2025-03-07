@@ -1,4 +1,4 @@
-package com.CoderEntrega.PreEntregaUnoCoder.modelo;
+package com.CoderEntrega.PreEntregaUnoCoder.DTOs;
 import java.time.LocalDateTime;
 
 public class EmpleadoDTO {

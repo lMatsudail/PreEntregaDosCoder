@@ -1,7 +1,8 @@
 package com.CoderEntrega.PreEntregaUnoCoder.Controllers;
-import com.CoderEntrega.PreEntregaUnoCoder.Sucursal;
+import com.CoderEntrega.PreEntregaUnoCoder.DTOs.SucursalDTO;
 import com.CoderEntrega.PreEntregaUnoCoder.Services.SucursalService;
-import com.CoderEntrega.PreEntregaUnoCoder.modelo.SucursalDTO;
+import com.CoderEntrega.PreEntregaUnoCoder.modelo.Sucursal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -19,7 +20,7 @@ public class SucursalController {
 
 
     @GetMapping
-    public List<Sucursal> getAllSucursales() {
+    public List<SucursalDTO> getAllSucursales() {
         return sucursalService.getAllSucursales();
     }
 }

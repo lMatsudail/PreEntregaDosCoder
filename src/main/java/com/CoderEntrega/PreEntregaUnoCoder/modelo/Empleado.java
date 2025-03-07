@@ -1,4 +1,4 @@
-package com.CoderEntrega.PreEntregaUnoCoder;
+package com.CoderEntrega.PreEntregaUnoCoder.modelo;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.*;
