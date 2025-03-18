@@ -1,5 +1,6 @@
 package com.CoderEntrega.PreEntregaUnoCoder.Repositories;
 import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,4 +15,5 @@ public interface EmpleadoRepository extends JpaRepository<Empleado, Long> {
     List <Empleado> findByCargo(String cargo);
     List <Empleado> findBySucursal(Sucursal sucursal);
     EmpleadoDTO save(EmpleadoDTO empleado);
+    boolean existsByDocumento(String documento);
 }

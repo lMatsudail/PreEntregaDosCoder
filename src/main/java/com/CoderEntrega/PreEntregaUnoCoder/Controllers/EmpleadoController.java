@@ -33,4 +33,12 @@ public class EmpleadoController {
     public Empleado registrarSalida(@PathVariable Long id) {
         return (Empleado) empleadoService.registrarSalida(id);
     }
+    @DeleteMapping("/{id}")
+    public void deleteEmpleado(@PathVariable Long id) {
+       empleadoService.deleteEmpleado(id);
+    }
+    @PutMapping
+    public EmpleadoDTO actualizarEmpleado(@RequestBody EmpleadoDTO empleado) {;
+        return empleadoService.actualizarEmpleado(empleado);
+    }
 }

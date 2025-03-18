@@ -26,7 +26,4 @@ public class SucursalService {
         }
         return listaSucursalesDTO;
     }
-    public void saveSucursal2(Sucursal s2) {
-        throw new UnsupportedOperationException("Unimplemented method 'saveSucursal'");
-    }
 }

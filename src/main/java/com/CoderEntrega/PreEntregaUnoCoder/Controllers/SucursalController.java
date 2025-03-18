@@ -8,6 +8,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/sucursal")
 public class SucursalController {
+
     @Autowired
     private SucursalService sucursalService;
 
@@ -15,7 +16,6 @@ public class SucursalController {
     public SucursalDTO createSucursal(@RequestBody SucursalDTO sucursal) {
         return sucursalService.saveSucursal(sucursal);
     }
-
 
     @GetMapping
     public List<SucursalDTO> getAllSucursales() {
