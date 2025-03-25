@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Error</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ocurrió un error</h1>
+    <p>Lo sentimos, algo salió mal. Por favor, intenta nuevamente más tarde.</p>
+    <p>Status: <span th:text="${status}"></span></p>
+    <p>Error: <span th:text="${error}"></span></p>
+    <p>Mensaje: <span th:text="${message}"></span></p>
+    <p>Timestamp: <span th:text="${timestamp}"></span></p>
+    <p>Path: <span th:text="${path}"></span></p>
+</body>
+</html>
