@@ -1,26 +1,21 @@
-package com.CoderEntrega.PreEntregaUnoCoder;
+package com.CoderEntrega.PreEntregaUnoCoder.modelo;
 import java.util.ArrayList;
 import java.util.List;
+
 import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "SUCURSALES")
+@Table(name = "SUCURSAL")
 
 public class Sucursal {
 
 @Id
 @GeneratedValue (strategy = GenerationType.IDENTITY)
 
-// generando columnas con @column para nombres y tipos de datos
-
-@Column(name = "ID_SUCURSAL")
 private Long id;
-@Column(name = "NOMBRE")
 private String nombre;
-@Column(name = "DIRECCION")
 private String direccion;
-@Column(name = "TELEFONO")
 private String telefono;
 
 public Sucursal(String nombre, String direccion, String telefono) {
@@ -78,6 +73,9 @@ public Sucursal(Long id, String nombre, String direccion, String telefono) {
     this.nombre = nombre;
     this.direccion = direccion;
     this.telefono = telefono;
+}
+
+public Sucursal() {
 }
 
 
